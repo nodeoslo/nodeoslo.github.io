@@ -2,9 +2,26 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>Test2</title>
     <link rel="stylesheet" href="./assets/styles.css" />
   </head>
+  <script>
+  function myFunction() {
+    var dots = document.getElementById("dots");
+    var moreText = document.getElementById("more");
+    var btnText = document.getElementById("myBtn");
+
+    if (dots.style.display === "none") {
+      dots.style.display = "inline";
+      btnText.innerHTML = "Read more";
+      moreText.style.display = "none";
+    } else {
+      dots.style.display = "none";
+      btnText.innerHTML = "Read less";
+      moreText.style.display = "inline";
+    }
+  }
+  </script>
   <body>
     <header class="video__cover">
 
@@ -25,7 +42,7 @@
         </div>
       </nav>
       <div class="title">
-        <h1>Work title<h1>
+        <h1><a href="sabine_bitter_helmut_weber_public_seminar.html">Work title</a></h1>
       </div>
       <p class="byline">Artist name</p>
     </header>
@@ -40,31 +57,43 @@
         Eine neue Gesellschaft braucht neue Bildungskonzepte. Für deren Umsetzung müssen kongeniale (Hoch-)Schularchitekturen geschaffen werden. Dieser Aufgabe stellen sich die reformerischen Experimente der 1960er- und 1970er-Jahre. Im Übergang von der Industrie- zur Wissensgesellschaft steht das Bildungswesen weltweit vor einer Neujustierung und Aufwertung, mag es um den Fortbestand des Wohlstands oder den Umsturz der Politik gehen. An welchen Orten gelehrt wird, gibt Auskunft über die pädagogischen Ideale. Die Filme dieser Ausstellung machen sich auf die Spur der gemauerten Schulideologie. Sie finden faszinierende Bollwerke der Reformpädagogik – und Träume in Trümmern.
       </p>
 
-      <div class="work__teasers__x2">
-        <div class="work__teaser">
-          <div style="padding:56.25% 0 0 0;position:relative;"><iframe class="vimeo__embed" src="https://player.vimeo.com/video/551889492?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Jakob Jakobsen_Open Plan_Open Fire_The Stavnsholt School on the News in My Childhood Home_3min.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-          <p class="credits">Jakob Jakobsen, <i>Open Plan, Open Fire: The Stavnsholt School on the News in my Childhood Home,</i> 2021.<br />
-            Video, 13:00 min. Courtesy the artist.
-          </p>
-          <h2>Mauern einreißen</h2>
-          <h3>Jakob Jakobsen: Stavnsholt School Open Plan Open Fire</h3>
+      <div class="work__full">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe class="vimeo__embed" src="https://player.vimeo.com/video/551889492?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Jakob Jakobsen_Open Plan_Open Fire_The Stavnsholt School on the News in My Childhood Home_3min.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <p class="credits">Jakob Jakobsen, <i>Open Plan, Open Fire: The Stavnsholt School on the News in my Childhood Home,</i> 2021.<br />
+          Video, 13:00 min. Courtesy the artist.
+        </p>
+        <h2>Mauern einreißen</h2>
+        <h3>Jakob Jakobsen: Stavnsholt School Open Plan Open Fire</h3>
+        <p>
+          Eine moderne Universität darf sich nicht als Elfenbeinturm verschließen. An der kanadischen University of Lethbridge wurden in den 70ern öffentliche Seminare in der Eingangshalle abgehalten. 2019 stellten Sabine Bitter und Helmut Weber mit Kunststudenten/innen der Universität dieses Seminarexperiment nach.
+        </p>
+        <span id="dots">...</span>
+        <span id="more">
           <p>
-            Eine moderne Universität darf sich nicht als Elfenbeinturm verschließen. An der kanadischen University of Lethbridge wurden in den 70ern öffentliche Seminare in der Eingangshalle abgehalten. 2019 stellten Sabine Bitter und Helmut Weber mit Kunststudenten/innen der Universität dieses Seminarexperiment nach. <a href="sabine_bitter_helmut_weber_public_seminar.html">Mehr Infos</a>
+            „Peoples’ University“ war das Stichwort, unter dem der kanadische Architekt Arthur Erickson in den 60ern und 70ern den Hochschulbau reformieren wollte. Sein brutalistischer Gebäudekomplex der University of Lethbridge sollte einen frei flottierenden Wissensaustausch ermöglichen, eine demokratische Forschung ohne architektonische Hierarchisierungen. Sabine Bitter und Helmut Weber kombinieren in ihrem Film historische Fotos, Videoausschnitte und Werbefilme der Universität mit der filmischen Dokumentation des Reenactments. Die Kunststudenten/innen zitieren in der historischen Sitzlandschaft aus den programmatischen Schriften von Arthur Erickson und fragen danach, wie sehr das Bildungsideal der 1960er vom Neoliberalismus des 21. Jahrhunderts okkupiert wurde. Stemmt sich Ericksons idealistische Architektur gegen die heutige Bildungsindustrie? Oder reichen ein paar Yogamatten, um sie mundtot zu machen?
           </p>
-        </div>
-        <div class="work__teaser">
-          <div style="padding:56.25% 0 0 0;position:relative;"><iframe class="vimeo__embed" src="https://player.vimeo.com/video/551889786?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sabine Bitter_Helmut Weber_Public Seminar_3min.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-          <p class="credits">Sabine Bitter & Helmut Weber, <i>Public Seminar,</i> 2019/2020<br />
-            Video, 12:05 min,<br />
-            Courtesy the artists<br />
-            Gefördert von / Funded by Bundeskanzleramt Österreich, Canada Council for the Arts
-          </p>
-          <h2>Unter dem Pflaster liegt der Strand</h2>
-          <h3>Sabine Bitter / Helmut Weber: Public Seminar</h3>
+        </span>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
+      </div>
+      <div class="work__full">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe class="vimeo__embed" src="https://player.vimeo.com/video/551889786?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sabine Bitter_Helmut Weber_Public Seminar_3min.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <p class="credits">Sabine Bitter & Helmut Weber, <i>Public Seminar,</i> 2019/2020<br />
+          Video, 12:05 min,<br />
+          Courtesy the artists<br />
+          Gefördert von / Funded by Bundeskanzleramt Österreich, Canada Council for the Arts
+        </p>
+        <h2>Unter dem Pflaster liegt der Strand</h2>
+        <h3>Sabine Bitter / Helmut Weber: Public Seminar</h3>
+        <p>
+          Eine moderne Universität darf sich nicht als Elfenbeinturm verschließen. An der kanadischen University of Lethbridge wurden in den 70ern öffentliche Seminare in der Eingangshalle abgehalten. 2019 stellten Sabine Bitter und Helmut Weber mit Kunststudenten/innen der Universität dieses Seminarexperiment nach.
+        </p>
+        <span id="dots">...</span>
+        <span id="more">
           <p>
-            Eine moderne Universität darf sich nicht als Elfenbeinturm verschließen. An der kanadischen University of Lethbridge wurden in den 70ern öffentliche Seminare in der Eingangshalle abgehalten. 2019 stellten Sabine Bitter und Helmut Weber mit Kunststudenten/innen der Universität dieses Seminarexperiment nach. <a href="sabine_bitter_helmut_weber_public_seminar.html">Mehr Infos</a>
+            „Peoples’ University“ war das Stichwort, unter dem der kanadische Architekt Arthur Erickson in den 60ern und 70ern den Hochschulbau reformieren wollte. Sein brutalistischer Gebäudekomplex der University of Lethbridge sollte einen frei flottierenden Wissensaustausch ermöglichen, eine demokratische Forschung ohne architektonische Hierarchisierungen. Sabine Bitter und Helmut Weber kombinieren in ihrem Film historische Fotos, Videoausschnitte und Werbefilme der Universität mit der filmischen Dokumentation des Reenactments. Die Kunststudenten/innen zitieren in der historischen Sitzlandschaft aus den programmatischen Schriften von Arthur Erickson und fragen danach, wie sehr das Bildungsideal der 1960er vom Neoliberalismus des 21. Jahrhunderts okkupiert wurde. Stemmt sich Ericksons idealistische Architektur gegen die heutige Bildungsindustrie? Oder reichen ein paar Yogamatten, um sie mundtot zu machen?
           </p>
-        </div>
+        </span>
+        <button onclick="myFunction()" id="myBtn">Read more</button>
       </div>
 
     </div>
