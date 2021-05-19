@@ -89,6 +89,22 @@ header .title {
   justify-content: center;
 }
 
+hr {
+  border: 0.01em solid;
+  margin: 2em 0;
+}
+
+.button {
+  background-color: white;
+  border: 0.02em solid;
+  border-radius: 0.1em;
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
 .container {
   margin: 1em;
 }
@@ -139,9 +155,13 @@ header .title {
     display: flex;
     justify-content: space-between;
   }
-  .work__teaser:first-child {
-  margin-right: 1em;
+  .work__teaser {
+  flex-basis: 49%;
   }
+}
+
+.work__full {
+  margin-bottom: 2em;
 }
 
 #more {display: none;}

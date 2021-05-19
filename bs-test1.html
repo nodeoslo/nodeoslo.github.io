@@ -2,26 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Test2</title>
+    <title>Test1</title>
     <link rel="stylesheet" href="./assets/styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous">
+    </script>
   </head>
-  <script>
-  function myFunction() {
-    var dots = document.getElementById("dots");
-    var moreText = document.getElementById("more");
-    var btnText = document.getElementById("myBtn");
 
-    if (dots.style.display === "none") {
-      dots.style.display = "inline";
-      btnText.innerHTML = "Read more";
-      moreText.style.display = "none";
-    } else {
-      dots.style.display = "none";
-      btnText.innerHTML = "Read less";
-      moreText.style.display = "inline";
-    }
-  }
-  </script>
   <body>
     <header class="video__cover">
 
@@ -42,7 +31,7 @@
         </div>
       </nav>
       <div class="title">
-        <h1><a href="sabine_bitter_helmut_weber_public_seminar.html">Work title</a></h1>
+        <h1><a href="#sabine_bitter_helmut_weber">Work title</a></h1>
       </div>
       <p class="byline">Artist name</p>
     </header>
@@ -65,17 +54,17 @@
         <h2>Mauern einreißen</h2>
         <h3>Jakob Jakobsen: Stavnsholt School Open Plan Open Fire</h3>
         <p>
-          Eine moderne Universität darf sich nicht als Elfenbeinturm verschließen. An der kanadischen University of Lethbridge wurden in den 70ern öffentliche Seminare in der Eingangshalle abgehalten. 2019 stellten Sabine Bitter und Helmut Weber mit Kunststudenten/innen der Universität dieses Seminarexperiment nach.
+          Mit Architektur gegen den Frontalunterricht. Lernen darf nicht langweilig sein – schon gar nicht für Kinder aus bildungsfernen Milieus. 1971 wurde in Kopenhagen die weltweit erste Einraum-Schule für die erste bis zehnte Klasse eröffnet. Die Schüler*innen richten sich ihr Lernumfeld selbst ein. 1973 beendete ein Gebäudebrand das umstrittene Experiment.
         </p>
-        <span id="dots">...</span>
-        <span id="more">
+        <span class="more">
           <p>
-            „Peoples’ University“ war das Stichwort, unter dem der kanadische Architekt Arthur Erickson in den 60ern und 70ern den Hochschulbau reformieren wollte. Sein brutalistischer Gebäudekomplex der University of Lethbridge sollte einen frei flottierenden Wissensaustausch ermöglichen, eine demokratische Forschung ohne architektonische Hierarchisierungen. Sabine Bitter und Helmut Weber kombinieren in ihrem Film historische Fotos, Videoausschnitte und Werbefilme der Universität mit der filmischen Dokumentation des Reenactments. Die Kunststudenten/innen zitieren in der historischen Sitzlandschaft aus den programmatischen Schriften von Arthur Erickson und fragen danach, wie sehr das Bildungsideal der 1960er vom Neoliberalismus des 21. Jahrhunderts okkupiert wurde. Stemmt sich Ericksons idealistische Architektur gegen die heutige Bildungsindustrie? Oder reichen ein paar Yogamatten, um sie mundtot zu machen?
+            Jakob Jakobsen interessiert sich in seiner Arbeit als Künstler und Autor vor allem für alternative gesellschaftliche Organisationsformen. Als Kind verfolgte er die Nachrichten über die Stavnsholt School. Im Speckgürtel von Kopenhagen wurde 1971 ein experimenteller Lernraum inmitten eines neuen Lebensraumes für junge Familien geschaffen. In Anlehnung an Summerhill School und Bauhaus sollte in der Stavnsholt School die Architektur vorausgehen, damit die Pädagogik folgen kann. Die Schüler*innen von 6 bis 16 Jahren versammeln sich im zentralen Raum, dem Open Plan, um ihr Lernumfeld zusammen mit den Lehrer*innen selbst zu gestalten. Während der Film aus dem Off von den idealistischen Ansätzen berichtet, schichtet er Fotos vom desaströsen Ende übereinander. 1973 brannte die Schule aus. In den Medien wurde aufgeatmet. An seiner Regelschule hatte sich Jakob Jakobsen immer gelangweilt.
           </p>
         </span>
-        <button onclick="myFunction()" id="myBtn">Read more</button>
+        <button class="readmore-btn button">Read more</button>
       </div>
-      <div class="work__full">
+      <hr />
+      <div class="work__full" id="sabine_bitter_helmut_weber">
         <div style="padding:56.25% 0 0 0;position:relative;"><iframe class="vimeo__embed" src="https://player.vimeo.com/video/551889786?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Sabine Bitter_Helmut Weber_Public Seminar_3min.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
         <p class="credits">Sabine Bitter & Helmut Weber, <i>Public Seminar,</i> 2019/2020<br />
           Video, 12:05 min,<br />
@@ -87,16 +76,69 @@
         <p>
           Eine moderne Universität darf sich nicht als Elfenbeinturm verschließen. An der kanadischen University of Lethbridge wurden in den 70ern öffentliche Seminare in der Eingangshalle abgehalten. 2019 stellten Sabine Bitter und Helmut Weber mit Kunststudenten/innen der Universität dieses Seminarexperiment nach.
         </p>
-        <span id="dots">...</span>
-        <span id="more">
+        <span class="more">
           <p>
             „Peoples’ University“ war das Stichwort, unter dem der kanadische Architekt Arthur Erickson in den 60ern und 70ern den Hochschulbau reformieren wollte. Sein brutalistischer Gebäudekomplex der University of Lethbridge sollte einen frei flottierenden Wissensaustausch ermöglichen, eine demokratische Forschung ohne architektonische Hierarchisierungen. Sabine Bitter und Helmut Weber kombinieren in ihrem Film historische Fotos, Videoausschnitte und Werbefilme der Universität mit der filmischen Dokumentation des Reenactments. Die Kunststudenten/innen zitieren in der historischen Sitzlandschaft aus den programmatischen Schriften von Arthur Erickson und fragen danach, wie sehr das Bildungsideal der 1960er vom Neoliberalismus des 21. Jahrhunderts okkupiert wurde. Stemmt sich Ericksons idealistische Architektur gegen die heutige Bildungsindustrie? Oder reichen ein paar Yogamatten, um sie mundtot zu machen?
           </p>
         </span>
-        <button onclick="myFunction()" id="myBtn">Read more</button>
+        <button class="readmore-btn button">Read more</button>
+      </div>
+      <hr />
+      <div class="work__full">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/551889167?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Fraser McCullum_Come-Live-With-Us_3min.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <p class="credits">Credits</p>
+        <h2>Die Freiheit, die ich (nicht) meine</h2>
+        <h3>Fraser McCallum: Come live with us</h3>
+        <p>
+          Die Revolution frisst sich selbst. 1968 gründeten Studierendeenten in Toronto das Rochdale College. Ein Beton-und-Glas-Hochhaus sollte zum Flaggschiff der Gegenkultur werden: Hippie’s Haven. Freies Leben und Lernen in einer selbstverwalteten Kommune. 1975 kapitulierte das College vor der organisierten Drogenkriminalität.
+        </p>
+        <span class="more">
+          <p>
+            „Come live with us“ klingt so empathisch, wie der interdisziplinäre Künstler Fraser McCallum es verstanden wissen möchte. Sein Film überblendet Kamerafahrten durch das heutige Apartmenthochhaus mit Fotos aus der College-Zeit, Presse- und Grafikdokumenten und lässt ehemalige Bewohner*innen aus den College-Publikationen rezitieren. Mitten in Toronto wurde ab 1968 ein Hochhaus gegen den Strich genutzt. Der Vereinzelung in der Wohnmaschine setzten die Hippie-Student*innen das Kollektiv in einer offenen Wabenstruktur entgegen. Die Faszination für das Lebens- und Lernexperiment und dessen Ästhetik will McCallum nicht verbergen. Er nutzt heutige Hightech-Geräte wie 3D- und Laserdruck, um sich dem Geist des alten Rochdale College anzunähern. Der Film ist ein Extrakt einer multimedialen Installation von McCallum, die er 2016 für das Art Museum der University of Toronto zusammengestellt hatte. Rochdale ist tot, das Experiment lebt weiter.
+          </p>
+        </span>
+        <button class="readmore-btn button">Read more</button>
+      </div>
+      <hr />
+      <div class="work__full">
+        <a href="skola-di-tarafe.html"><img class="video__poster" src="./assets/skola-di-tarafe.jpg" width="100%"/></a>
+        <p class="credits">Credits</p>
+        <h2>Bildung gegen Bomben</h2>
+        <h3>Filipa César, Sónia Vaz Borges: Skola di Tarafe</h3>
+        <p>
+          Wissen bedeutet Freiheit. Schulen sind die Schmieden der Revolution. Im Befreiungskampf von Guinea-Bissau unter Amilcar Lopes Cabral gegen die portugiesischen Kolonialisten Kolonialmacht mussten sich die Schulen vor dem Bombenterror der Portugiesen in den Mangroven verstecken. Die Natur ist die Verbündete, unter deren schützendem Dach gelernt wird.
+        </p>
+        <form action="skola-di-tarafe.html" method="get">
+          <button class="button" onclick="myFunction()" id="myBtn">More info</button>
+        </form>
       </div>
 
     </div>
 
   </body>
+
+  <script>
+
+    ///hide the more content
+    $( document ).ready(function() {
+      $(".more").hide();
+    });
+
+    // click on button is toggling the sibling with class "more"
+    $( ".readmore-btn" ).click(function() {
+      $(this).siblings(".more").toggle();
+
+    })
+
+    // change text of button
+    $(".readmore-btn").click(function() {
+        if ($(this).text() == "Read more") {
+            $(this).text("Read less");
+        } else {
+            $(this).text("Read more");
+        };
+    });
+
+  </script>
+
 </html>
