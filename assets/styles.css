@@ -139,8 +139,8 @@ header .title {
     display: flex;
     justify-content: space-between;
   }
-  .work__teaser:first-child {
-  margin-right: 1em;
+  .work__teaser {
+  flex-basis: 49%;
   }
 }
 
