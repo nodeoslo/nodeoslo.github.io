@@ -1,52 +1,88 @@
+:root {
+  --textsize: 1.33em;
+}
+
 @font-face {
   font-family: "Fakt Pro";
-  src: url("fonts/FaktPro-Normal.woff2") format("woff2"),
-       url("fonts/FaktPro-Normal.woff") format("woff");
+  src: url("../assets/fonts/FaktPro-Normal.woff2") format("woff2"),
+       url("../assets/fonts/FaktPro-Normal.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Fakt Pro";
-  src: url("fonts/FaktPro-NormalItalic.woff") format("woff");
+  src: url("../assets/fonts/FaktPro-NormalItalic.woff") format("woff");
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Fakt Pro";
-  src: url("fonts/Fakt-SemiBold.woff2") format("woff2");
-  font-style: normal;
+  src: url("../assets/fonts/Fakt-SemiBold.woff2") format("woff2");
   font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Lyno Stan HKW";
-  src: url("fonts/LynoStanHKW.woff2") format("woff2"),
-       url("fonts/LynoStanHKW.woff") format("woff");
+  src: url("../assets/fonts/LynoStanHKW.woff2") format("woff2"),
+       url("../assets/fonts/LynoStanHKW.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 
 body {
+  font-family: "Fakt Pro", sans-serif;
   margin: 0;
 }
-@media (min-width: 640px) {
+@media (min-width: 715px) {
   body {
     font-size: 21px;
   }
 }
 
+h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+  margin: 1rem 0 0 0;
+}
+
+h2 {
+  font-size: 2.5em;
+  font-weight: normal;
+  margin: 1rem 0 0 0;
+}
+
+h3 {
+  font-size: var(--textsize);
+  font-weight: 600;
+  margin: 0 0 1.2em 0;
+}
+
+p {
+  font-size: var(--textsize);
+  max-width: 40em;
+}
+
 header {
   z-index: 0;
 }
-@media (min-width: 1024px) {
-  header {
-    padding: 1.5rem 3rem;
+.header {
+  background-color: black;
+  margin-bottom: 3rem;
+}
+
+.header__foreground {
+  margin: 1rem;
+}
+@media (min-width: 715px) {
+  .header__foreground {
+    margin: 1.5rem 2rem;
   }
 }
 
-header h1 {
+.title {
   color: yellow;
   font-size: 2.5em;
   font-family: "Lyno Stan HKW", "Fakt Pro", sans-serif;
@@ -56,14 +92,48 @@ header h1 {
   letter-spacing: 0.02em;
 }
 @media (min-width: 640px) {
-  header h1 {
+  .title {
     font-size: 3.33em;
     margin: 0.5em 0 0 0;
   }
 }
+.title a {
+  color: yellow;
+}
+
+.byline {
+  bottom: 3rem;
+  color: white;
+  font-size: var(--textsize);
+  font-weight: 600;
+  left: 1rem;
+  position: absolute;
+}
+@media (min-width: 715px) {
+  .byline {
+    left: 1.5rem;
+  }
+}
+
+.projecttitle {
+  color: white;
+  font-family: "Lyno Stan HKW", "Fakt Pro", sans-serif;
+  font-size: 2em;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+@media (min-width: 375px) {
+  .projecttitle {
+    font-size: 2.4em;
+  }
+}
 @media (min-width: 1024px) {
-  header h1 {
-    font-size: 5.33em;
+  .projecttitle {
+    font-size: 3.5em;
+    line-height: 0.92;
   }
 }
 
@@ -71,15 +141,44 @@ h1 a {
   text-decoration: none;
 }
 
-nav .logo svg {
-  fill: currentcolor;
-  max-width: 130px;
+.logo {
+  flex-basis: 25%;
+  z-index: 1;
+  margin-bottom: 2rem;
 }
 
-header .language {
-  font-size: 0.62em;
+nav .logo svg {
+  fill: white;
+  height: 2em;
+  width: auto;
+}
+@media (min-width: 375px) {
+  nav .logo svg {
+    height: 2.4em;
+  }
+}
+@media (min-width: 1024px) {
+  nav .logo svg {
+    height: 3.35em;
+  }
+}
+
+nav .language {
+  font-size: 1em;
   position: absolute;
-  right: 0;
+  right: 1rem;
+  top: 1rem;
+}
+@media (min-width:715px) {
+  nav .language {
+    right: 2rem;
+    top: 1.3rem;
+  }
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
 header .title {
@@ -89,9 +188,26 @@ header .title {
   justify-content: center;
 }
 
+section {
+}
+
 hr {
-  border: 0.01em solid;
-  margin: 2em 0;
+  border: 1px solid;
+  margin: 5em 0;
+}
+
+.logo-projettitle {
+  display: block;
+}
+@media (min-width: 550px) {
+  .logo-projettitle {
+    align-items: flex-start;
+    display: flex;
+  }
+}
+
+.work {
+  margin: 6rem 0;
 }
 
 .button {
@@ -105,25 +221,37 @@ hr {
   cursor: pointer;
 }
 
-.main {
+main {
   margin: 1em;
 }
 
 .credits {
   font-size: 0.8em;
   height: 1.2em;
-  margin: 0 0 2em 0;
+  margin-top: 0.5em;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  position: relative;
+}
+
+.credits__btn{
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  background: none;
+}
+
+.credits__full{
+  overflow: auto;
+  height: auto;
 }
 
 .lead {
-  font-size: 1.2em;
 }
 
 .video__cover {
-  padding: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -146,22 +274,23 @@ hr {
 .vimeo__embed {
 }
 
-.work__teasers__x2 {
-  display: block;
-  margin: 2em 0;
+.work {
+  margin-bottom: 2em;
 }
-@media (min-width: 768px) {
-  .work__teasers__x2 {
+
+.text {
+  margin-top: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .text {
     display: flex;
     justify-content: space-between;
   }
-  .work__teaser {
-  flex-basis: 49%;
+  .text__column {
+    width: 49%;
   }
 }
 
-.work__full {
-  margin-bottom: 2em;
-}
 
 #more {display: none;}
