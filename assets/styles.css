@@ -193,7 +193,10 @@ section {
 }
 
 hr {
-  border: 1px solid;
+  border: none;
+  height: 1px;
+  color: black;
+  background-color: black;
   margin: 5em 0;
 }
 
@@ -214,16 +217,25 @@ hr {
 .button {
   background-color: white;
   border: 0.02em solid;
-  border-radius: 0.1em;
-  padding: 0.5em 1em;
+  border-radius: 10em;
+  padding: 0.4em 0.4em 0.5em 0.4em;
   text-align: center;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 1.5em;
+  line-height: 0.5;
   cursor: pointer;
 }
 
 main {
-  margin: 1em;
+}
+
+.element {
+  margin: 0 1em;
+}
+@media (min-width: 1400px) {
+  .element {
+    margin: 0 3em;
+  }
 }
 
 .credits {
