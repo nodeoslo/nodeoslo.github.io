@@ -19,7 +19,8 @@
 
 @font-face {
   font-family: "Fakt Pro";
-  src: url("../assets/fonts/Fakt-SemiBold.woff2") format("woff2");
+  src: url("../assets/fonts/Fakt-SemiBold.woff2") format("woff2"),
+       url("../assets/fonts/Fakt-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
 }
