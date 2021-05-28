@@ -1,5 +1,6 @@
 :root {
   --textsize: 1.33em;
+  --title-textcolor: yellow;
 }
 
 @font-face {
@@ -33,26 +34,36 @@
   font-weight: normal;
 }
 
+/* || GENERAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Fakt Pro", sans-serif;
   margin: 0;
 }
-@media (min-width: 715px) {
+@media (min-width: 640px) {
   body {
     font-size: 21px;
   }
 }
 
-h1 {
-  font-size: 2.5em;
+h1, h2 {
+  font-size: 2em;
   font-weight: normal;
+  line-height: 1;
   margin: 1rem 0 0 0;
 }
+@media (min-width: 414px) {
+  h1, h2 {
+    font-size: 2.5em;
+  }
+}
 
-h2 {
-  font-size: 2.5em;
-  font-weight: normal;
-  margin: 1rem 0 0 0;
+h1 a {
+  text-decoration: none;
 }
 
 h3 {
@@ -66,6 +77,8 @@ p {
   max-width: 40em;
 }
 
+/* || Header and Main Navigation */
+
 header {
   z-index: 0;
 }
@@ -74,28 +87,45 @@ header {
   margin-bottom: 3rem;
 }
 
-.header__foreground {
+.header-foreground {
   margin: 1rem;
 }
-@media (min-width: 715px) {
-  .header__foreground {
+@media (min-width: 640px) {
+  .header-foreground {
     margin: 1.5rem 2rem;
   }
 }
 
 .title {
-  color: yellow;
-  font-size: 2.5em;
+  color: var(--title-textcolor);
+  font-size: 3em;
   font-family: "Lyno Stan HKW", "Fakt Pro", sans-serif;
   font-weight: normal;
-  line-height: 0.85;
-  text-transform: uppercase;
   letter-spacing: 0.02em;
+  line-height: 0.85;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+}
+@media (min-width: 375px) {
+  .title {
+    font-size: 3.5em;
+  }
 }
 @media (min-width: 640px) {
   .title {
-    font-size: 3.33em;
-    margin: 0.5em 0 0 0;
+    font-size: 5em;
+    margin-top: 0.5em;
+  }
+}
+@media (min-width: 1366px) {
+  .title {
+    font-size: 7em;
+  }
+}
+@media (min-width: 1920px) {
+  .title {
+    font-size: 8em;
+    margin-top: 0.9em;
   }
 }
 .title a {
@@ -110,7 +140,7 @@ header {
   left: 1rem;
   position: absolute;
 }
-@media (min-width: 715px) {
+@media (min-width: 640px) {
   .byline {
     left: 1.5rem;
   }
@@ -138,14 +168,10 @@ header {
   }
 }
 
-h1 a {
-  text-decoration: none;
-}
-
 .logo {
   flex-basis: 25%;
+  margin-bottom: 0.5rem;
   z-index: 1;
-  margin-bottom: 2rem;
 }
 
 nav .logo svg {
@@ -170,7 +196,7 @@ nav .language {
   right: 1rem;
   top: 1rem;
 }
-@media (min-width:715px) {
+@media (min-width:640px) {
   nav .language {
     right: 2rem;
     top: 1.3rem;
@@ -189,24 +215,52 @@ header .title {
   justify-content: center;
 }
 
-section {
-}
-
-hr {
-  border: none;
-  height: 1px;
-  color: black;
-  background-color: black;
-  margin: 5em 0;
-}
-
 .logo-projettitle {
-  display: block;
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
 }
-@media (min-width: 550px) {
+@media (min-width: 475px) {
   .logo-projettitle {
-    align-items: flex-start;
-    display: flex;
+    padding-right: 2em;
+  }
+}
+
+/* || Content/sections */
+
+.bodytext {
+  -webkit-hyphens: auto;
+  -webkit-hyphenate-limit-before: 3;
+  -webkit-hyphenate-limit-after: 3;
+  -webkit-hyphenate-limit-chars: 6 3 3;
+  -webkit-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-zone: 8%;
+
+  -moz-hyphens: auto;
+  -moz-hyphenate-limit-chars: 6 3 3;
+  -moz-hyphenate-limit-lines: 2;
+  -moz-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-zone: 8%;
+
+  -ms-hyphens: auto;
+  -ms-hyphenate-limit-chars: 6 3 3;
+  -ms-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-zone: 8%;
+
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}
+@media (min-width: 640px) {
+  .bodytext {
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
   }
 }
 
@@ -218,7 +272,7 @@ hr {
   background-color: white;
   border: 0.02em solid;
   border-radius: 10em;
-  padding: 0.4em 0.4em 0.5em 0.4em;
+  padding: 0.4em;
   text-align: center;
   text-decoration: none;
   font-size: 1.5em;
@@ -245,7 +299,7 @@ hr {
   position: relative;
 }
 
-.credits__btn{
+.credits__btn {
   position: absolute;
   right: 0;
   top: 0;
@@ -261,14 +315,14 @@ hr {
 .lead {
 }
 
-.video__cover {
+.video-cover {
   width: 100%;
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
-.video__cover__iframe {
+.video-cover__iframe {
   box-sizing: border-box;
   width: 177.77777778vh;
   height: 56.25vw;
@@ -281,7 +335,7 @@ hr {
   z-index: -1;
 }
 
-.vimeo__embed {
+.vimeo-embed {
 }
 
 .work {
@@ -289,7 +343,7 @@ hr {
 }
 
 .text {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 }
 
 @media (min-width: 1200px) {
